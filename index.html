@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css"> </head>
+
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center">Pomodoro</h1>
+        <div class="row">
+            <div class="col-xs-12">
+                <div id="pomodoro">
+                    <div class="status" data-status="work">Work</div>
+                    <div class="timer"><span class="minutes">25</span>:<span class="seconds">00</span></div>
+                    <div class="action">Count: <span id="pomodoros-num"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row task-details text-center">
+            <p class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">Current task: <span id="task-name"></span></p>
+            <p class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">All time pomodoros: <span id="alltime"></span></p>
+        </div>
+        <div class="row controls text-center">
+                <div class="col-md-offset-3 col-md-2 work">
+                    <p>Work length</p>
+                    <button class="btn btn-default btn-md  minus">-</button><span class="val">25</span>
+                    <button class="btn btn-default btn-md  plus">+</button>
+                </div>
+                <div class="col-md-2">
+                    <p>Control</p>
+                    <button class="btn btn-danger btn-lg reset">Reset</button>
+                    <button class="btn btn-success btn-lg start">Start</button>
+                </div>
+                <div class="col-md-2 break">
+                    <p>Break length</p>
+                    <button class="btn btn-default btn-md minus">-</button><span class="val">5</span>
+                    <button class="btn btn-default btn-md  plus">+</button>
+                </div>
+        </div>
+        <audio class="hidden sound" controls>
+            <source src="sound1.mp3" type="audio/mp3"> Your browser does not support the audio tag. </audio>
+        <audio class="hidden sound" controls>
+            <source src="sound2.mp3" type="audio/mp3"> Your browser does not support the audio tag. </audio>
+    </div>
+    <!-- bootstrap modal -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
